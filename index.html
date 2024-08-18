@@ -122,7 +122,7 @@
           сплоченный коллектив единомышленников, но и стиль жизни.
         </p>
       </div>
-      <div class="flex hegiht relative justify-between">
+      <div class="flex hegiht height-mobile--js relative justify-between">
         <div class="flex relative z-1 w-1/2">
           <p class="secondTextColor">
             Дмитрий Менделеев придумал периодическую систему элементов во сне, а Илону Маску в
@@ -135,7 +135,7 @@
             сплоченный коллектив единомышленников, но и стиль жизни.
           </p>
         </div>
-        <div class="flex w-1/2 fixed maxHeightList justify-between">
+        <div class="flex w-1/2 fixed maxHeightList justify-between cards--js">
           <div class="flex border-2 items-center flex-col justify-center w-49 p-4 borderColor mb-5">
             <img
               src="./graphic elements/images/beer.png"
@@ -618,11 +618,25 @@
     }
 
     .moveTop {
-      transform: translateY(-100vh);
+      /* transform: translateY(-100vh);
+      */
+      /* transition: none !important; */
     }
+    .maxHeightList {
+      max-height: none !important;
+      /* position: absolute; */
+    }
+    .moveTop,
     .showFullItemsList {
-      top: 0 !important;
-      max-height: 100% !important;
+      transition: transform 0.3s linear;
+      /* transition: none !important; */
+      /* top: 0 !important;
+       */
+      /* top: 0; */
+      /* transform: translateY(calc(100vh - 100%)); */
+
+      /* bottom: 0; */
+      /* max-height: 100% !important; */
       /* max-height: none; */
     }
   }
@@ -809,7 +823,6 @@
   window.addEventListener('scroll', function (event) {
     const currentHeight = window.pageYOffset;
     cells.classList.add('transitionedCells');
-    console.log(currentHeight);
 
     if (currentHeight > 620) {
       changeOpacityTo0();
@@ -822,7 +835,7 @@
       hideSecondText();
     }
 
-    if (currentHeight > 1640) {
+    if (currentHeight > 1740) {
       showFullCards();
     } else {
       dontShowFullCards();
