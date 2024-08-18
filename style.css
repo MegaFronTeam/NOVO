@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bg_current {
+    background-image: url(./textures/grunge-background.jpg);
+  }
+  html {
+    font-family: "LG";
+  }
+  @font-face {
+    font-family: "LG";
+    src: url(./font/15780.otf);
+  }
+  .hegiht {
+    height: 700px;
+    color: white;
+  }
+}
