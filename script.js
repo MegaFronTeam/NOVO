@@ -3,7 +3,7 @@ function checkScreenWidth() {
   if (window.innerWidth < 1000) {
     document.querySelector('.height-mobile--js').style.minHeight =
       document.querySelector('.secondTextColor').offsetHeight +
-      document.querySelector('.cards--js').offsetHeight +
+      document.querySelector('.cards--js').offsetHeight * 1.1 +
       'px';
     if (document.querySelector('.cards--js').classList.contains('showFullItemsList')) {
       if (baseScrollY === 0) {
