@@ -4,6 +4,7 @@ function checkScreenWidth() {
     document.querySelector('.height-mobile--js').style.minHeight =
       document.querySelector('.secondTextColor').offsetHeight +
       document.querySelector('.cards--js').offsetHeight +
+      300 +
       'px';
     if (document.querySelector('.cards--js').classList.contains('showFullItemsList')) {
       if (baseScrollY === 0) {
@@ -20,10 +21,16 @@ function checkScreenWidth() {
       let windowHeight = window.innerHeight;
       if (height > windowHeight) {
       }
-      document.querySelector('.cards--js').style.transform = `translateY(-${scrollDifference}px)`;
-      document.querySelector(
-        '.secondTextColor',
-      ).style.transform = `translateY(-${scrollDifference}px)`;
+      // document.querySelector('.cards--js').style.transform = `translateY(-${scrollDifference}px)`;
+      // document.querySelector(
+      //   '.secondTextColor',
+      // ).style.transform = `translateY(-${scrollDifference}px)`;
+
+      document.querySelectorAll('.cards--js, .secondTextColor').forEach((element) => {
+        // if (element.getBoundingClientRect().top < 0) {
+        element.style.transform = `translateY(-${scrollDifference}px)`;
+        // }
+      });
       // console.log('document', document.querySelector('.cards--js').offsetTop);
       // console.log('scrollY', window.scrollY);
     }
