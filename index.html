@@ -16,7 +16,9 @@
     <div class="z-0 z-10 absolute w-full blackScreen" id="blackScreen"></div>
     <div class="bg_current items-center h-96 none" id="mainBlock">
       <div class="flex hegiht relative">
-        <img name="posFix" src="./logo/lg.svg" alt="" srcset="" class="absolute z-100 top-logo" />
+        <a class="scroll-link-js" href="/">
+          <img name="posFix" src="./logo/lg.svg" alt="" srcset="" class="absolute z-100 top-logo" />
+        </a>
         <img
           src="./graphic elements/vector-clock.svg"
           alt=""
@@ -257,6 +259,11 @@
 </html>
 
 <style>
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
   .mb-72 {
     margin-bottom: 250px;
   }

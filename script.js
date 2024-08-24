@@ -42,3 +42,13 @@ function checkScreenWidth() {
 
 document.addEventListener('scroll', checkScreenWidth, false);
 document.addEventListener('DOMContentLoaded', checkScreenWidth, false);
+
+document.querySelectorAll('.scroll-link-js').forEach((element) => {
+  element.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+});
